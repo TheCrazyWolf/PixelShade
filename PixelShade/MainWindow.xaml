@@ -9,21 +9,35 @@
         ui:WindowHelper.UseModernWindowStyle="True"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ui:SplitView IsPaneOpen="True"
-           DisplayMode="Inline"
-           OpenPaneLength="296">
-            <ui:SplitView.Pane>
-                <Button>sd</Button>
-            </ui:SplitView.Pane>
-
+        <ui:NavigationView PaneTitle="sfd" >
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem x:Name="nav_jurnalkpp"  Icon="Library" Content="Журнал для КПП"  />
+            </ui:NavigationView.MenuItems>
+            <Frame>
+                
+            </Frame>
+        </ui:NavigationView>
+        <ui:ContentDialog Visibility="Collapsed" Title="Авторизация" Name="dialog_auth">
             <Grid>
-                <TextBlock Text="Content"
-                   FontSize="24"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
-                <Button Content="show" Click="Button_Click"/>
+                <StackPanel>
+                    <Label Margin="0 0 0 20">Ввод учетных данных</Label>
+                    <Label>Способ авторизации</Label>
+                    <ComboBox SelectedItem="0">
+                        <ComboBoxItem Content="Личный кабинет студента (lk.samgk.ru"/>
+                        <ComboBoxItem Content="Авторизация через БД"/>
+                    </ComboBox>
+                    <Label>Логин</Label>
+                    <TextBox />
+                    <Label>Пароль</Label>
+                    <PasswordBox/>
+                    <CheckBox Content="Обязуюсь использовать компьютер в только учебных целях"/>
+                    <Label Margin="0 10 0 0" Content="Напоминание!"/>
+                    <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                        <Button Margin="0 0 15 0" Content="Вход"/>
+                        <Button Content="Регистрация"/>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
-        </ui:SplitView>
-        
+        </ui:ContentDialog>
     </Grid>
 </Window>

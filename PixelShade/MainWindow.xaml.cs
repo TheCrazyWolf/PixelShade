@@ -28,15 +28,17 @@ namespace PixelShade
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            ContentDialog noWifiDialog = new ContentDialog
-            {
-                Title = "No wifi connection",
-                Content = "Check your connection and try again.",
-                
-                CloseButtonText = "Ok"
-            };
+            await dialog_auth.ShowAsync();
 
-            ContentDialogResult result = await noWifiDialog.ShowAsync();
+            //ContentDialog noWifiDialog = new ContentDialog
+            //{
+            //    Title = "No wifi connection",
+            //    Content = "Check your connection and try again.",
+                
+            //    CloseButtonText = "Ok"
+            //};
+
+            //ContentDialogResult result = await noWifiDialog.ShowAsync();
         }
     }
 }
