@@ -17,14 +17,15 @@
                 
             </Frame>
         </ui:NavigationView>
-        <ui:ContentDialog Visibility="Collapsed" Title="Авторизация" Name="dialog_auth">
+        <ui:ContentDialog Title="Авторизация" Name="dialog_auth">
             <Grid>
                 <StackPanel>
                     <Label Margin="0 0 0 20">Ввод учетных данных</Label>
                     <Label>Способ авторизации</Label>
-                    <ComboBox SelectedItem="0">
-                        <ComboBoxItem Content="Личный кабинет студента (lk.samgk.ru"/>
-                        <ComboBoxItem Content="Авторизация через БД"/>
+                    <ComboBox Name="box">
+                        
+                        <ComboBoxItem Content="Личный кабинет студента (lk.samgk.ru)"/>
+                        <ComboBoxItem Content="Другая"/>
                     </ComboBox>
                     <Label>Логин</Label>
                     <TextBox />

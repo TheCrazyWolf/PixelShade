@@ -21,9 +21,18 @@ namespace PixelShade
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        enum AuthMode
+        {
+            СГК, БД
+        }
+
         public MainWindow()
         {
             InitializeComponent();
+
+            box.SelectedIndex = 0;
+            dialog_auth.ShowAsync();
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
